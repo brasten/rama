@@ -2,6 +2,9 @@ Random notes relevant to the project:
 
 ## Puma ##
 
+-- Most of this is irrelevant given Rake Hijack. Where have I been the last year or two?? --
+
+
 Reactor:73 >> Raw input sent to app pool?
 >   begin
 >     if c.try_to_finish
