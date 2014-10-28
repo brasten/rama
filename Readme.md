@@ -3,16 +3,33 @@
 This isn't really a thing. It's a from-scratch, hobby-ish project. The kind of thing you'd
 be stupid to build yourself because there are dozens available already.
 
-Rama is another api server framework.
-
-There are many like it, but this one is mine.
-
-And, actually, calling it a framework implies that there's code that works. That is not the case. Think of this
-more as a scratchpad of ideas, some work, some don't.
+The aim of this project is to build yet another web framework. Really more of a toolkit for API services. 
 
 ## Goals ##
 
- * to solve all the problems I've had with every other framework
- * to make async possible and easy where necessary; invisible where not.
- * targeted at backend/API server development, not so much web development.
- * less DSL-ish. More toolbox-ish.
+ * Solve all the nitpicks I've had with every other framework
+ * Make async possible, easy, and by default. Invisible in most cases, but highly customizable
+   when needed.
+ * Targeted at backend/API server development, not so much web development
+ * Less DSL-ish; more PORO-ish
+ * Less monolithic; more toolbox-ish
+
+ 
+### Inspirations ###
+
+Most of the inspiration comes from Ruby itself, and wanting a service framework lets you write
+more of your code in pure Ruby and less in framework DSLs. Other inspirations:
+ 
+  * Scala futures and how they enable simple, high-performant async code
+  * The Play framework; specifically the parts that build upon futures for async responses
+  * Merb; specifically the focus of less magic, more straight-forward code
+ 
+ 
+### Design Decisions ###
+
+These can and will change as needed to meet the project goals. I welcome feedback.
+ 
+ * Build heavily on Concurrent-Ruby gem. I'd love to support Celluloid as well -- in fact I'd consider support for it
+   critical at the application-layer. But the concurrent-ruby gem is a better fit for Rama internals.
+   
+ * ...
