@@ -38,4 +38,6 @@ These can and will change as needed to meet the project goals. I welcome feedbac
 
  * rama-dispatch: routing and basic request/response handling. This will probably be broken up into rama-routing
      and something else eventually.
- * rama-metrics: -- not yet implemented --
+ * rama-metrics: (not yet implemented) metrics and event gathering -- similar to, or perhaps derived from, Puma's Event.
+ * rama-config: (not yet implemented) App configuration as a first-class citizen. Should be able to pull configuration
+     from the project, from a system directory, as well as environment variables.
