@@ -31,5 +31,11 @@ These can and will change as needed to meet the project goals. I welcome feedbac
  
  * Build heavily on Concurrent-Ruby gem. I'd love to support Celluloid as well -- in fact I'd consider support for it
    critical at the application-layer. But the concurrent-ruby gem is a better fit for Rama internals.
-   
- * ...
+ * Package and deploy apps as Rubygems??? I'm sure someone's considered this -- would love feedback. Seems like
+   a decent way to deploy services.
+ 
+### Sub-projects ###
+
+ * rama-dispatch: routing and basic request/response handling. This will probably be broken up into rama-routing
+     and something else eventually.
+ * rama-metrics: -- not yet implemented --
