@@ -1,9 +1,8 @@
-GIT
-  remote: git://github.com/pitr-ch/concurrent-ruby.git
-  revision: 17e443b5112e9bfb3b1b27b657997d9c9e1311cc
-  branch: next
+PATH
+  remote: .
   specs:
-    concurrent-ruby (0.7.0)
+    rama (0.1.0)
+      concurrent-ruby
 
 GEM
   remote: https://rubygems.org/
@@ -11,6 +10,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
+    concurrent-ruby (0.7.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     ffi (1.9.6)
@@ -36,9 +36,6 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.9.1)
-      rack (>= 1.1, < 2.0)
-    rack (1.5.2)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -68,9 +65,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  concurrent-ruby!
   guard-rspec
-  puma
+  rama!
   rspec (>= 3.1)
   rspec-mocks (>= 3.1)
   simplecov

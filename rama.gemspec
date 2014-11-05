@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Brasten Sager"]
   s.email       = "brasten@brasten.me"
   s.homepage    = "http://not.yet.a.thing"
-  s.summary     = "rama-#{Rama::Version::STRING}"
+  s.summary     = "rama-#{Rama::VERSION}"
   s.description = "Ruby web framework"
 
   s.files            = `git ls-files -- lib/*`.split("\n")
