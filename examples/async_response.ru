@@ -1,5 +1,5 @@
 require 'rack'
-require 'rama/dispatch'
+require 'rama-dispatch'
 require 'rama/rack'
 require_relative '../vendor/vendor'
 
@@ -32,3 +32,4 @@ rama_action = ->(req) {
 adapter = Rama::Rack::RackAdapter.new(rama_action)
 
 run adapter
+
