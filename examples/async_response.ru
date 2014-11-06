@@ -1,35 +1,23 @@
-require 'rack'
-require 'rama-dispatch'
-require 'rama/rack'
-require_relative '../vendor/vendor'
+require 'the_metal'
+require 'the_metal/response'
 
 def fibonacci( n )
   return  n  if ( 0..1 ).include? n
   ( fibonacci( n - 1 ) + fibonacci( n - 2 ) )
 end
 
-rama_action = ->(req) {
+rama_action = ->(req, res) {
   Concurrent::Next::Future.execute(:io) {
-    fib_result = fibonacci(35)
-
-    Rack::Response.new(<<-EOM.split
-<html>
-  <head>
-    <title>YAY!</title>
-  </head>
-  <body>
-    #{fib_result}
-    lskjdlkfjsldkj
-    skldjflsk
-    lksdjf
-  </body>
-</html>
-      EOM
-    )
+    fibonacci(36)
+  }.then { |result|
+    res.write_head 200, 'Content-Type' => 'application/xml'
+    res.write "<fib>#{result}</fib>"
+    res.finish
   }
 }
 
-adapter = Rama::Rack::RackAdapter.new(rama_action)
+require 'the_metal/puma'
 
-run adapter
-
+# app = TheMetal.build_app [], [], rama_action
+server = TheMetal.create_server rama_action
+server.listen 9292, '0.0.0.0'

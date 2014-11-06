@@ -23,7 +23,11 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "concurrent-ruby"
   s.add_runtime_dependency "the_metal"
+  # because the_metal requires it.
+  s.add_runtime_dependency "rack"
 
+
+  s.add_development_dependency "rake"
   s.add_development_dependency "rspec", ">= 3.1"
   s.add_development_dependency "rspec-mocks", ">= 3.1"
   s.add_development_dependency "simplecov"

@@ -1,3 +1,2 @@
-Rama::Router::Routes.new do
+require 'bundler/gem_tasks'
 
-end
