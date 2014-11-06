@@ -1,8 +1,15 @@
+GIT
+  remote: git://github.com/tenderlove/the_metal.git
+  revision: 8cbd58175452f63bb7d07f17f9b325045be996d9
+  specs:
+    the_metal (0.0.0)
+
 PATH
   remote: .
   specs:
     rama (0.1.0)
       concurrent-ruby
+      the_metal
 
 GEM
   remote: https://rubygems.org/
@@ -70,3 +77,4 @@ DEPENDENCIES
   rspec (>= 3.1)
   rspec-mocks (>= 3.1)
   simplecov
+  the_metal!

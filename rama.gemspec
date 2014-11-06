@@ -5,7 +5,7 @@ require "rama/version"
 
 Gem::Specification.new do |s|
   s.name        = "rama"
-  s.version     = Rama::Version::STRING
+  s.version     = Rama::VERSION
   s.platform    = Gem::Platform::RUBY
   s.license     = "MIT"
   s.authors     = ["Brasten Sager"]
@@ -15,13 +15,14 @@ Gem::Specification.new do |s|
   s.description = "Ruby web framework"
 
   s.files            = `git ls-files -- lib/*`.split("\n")
-  s.files           += ["License.txt"]
+  # s.files           += ["License.txt"]
   s.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
   s.extra_rdoc_files = [ "Readme.md" ]
   s.rdoc_options     = ["--charset=UTF-8"]
   s.require_path     = "lib"
 
   s.add_runtime_dependency "concurrent-ruby"
+  s.add_runtime_dependency "the_metal"
 
   s.add_development_dependency "rspec", ">= 3.1"
   s.add_development_dependency "rspec-mocks", ">= 3.1"
