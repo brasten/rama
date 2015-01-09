@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.description = "Ruby web framework"
 
   s.files            = `git ls-files -- lib/*`.split("\n")
-  # s.files           += ["License.txt"]
   s.test_files       = `git ls-files -- {spec,features}/*`.split("\n")
   s.extra_rdoc_files = [ "Readme.md" ]
   s.rdoc_options     = ["--charset=UTF-8"]
